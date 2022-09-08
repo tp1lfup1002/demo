@@ -1,10 +1,15 @@
 <template>
   <Menu mode="horizontal" theme="dark" active-name="1">
     <div class="layout-logo">(❁´◡`❁)</div>
+
     <div class="layout-nav">
       <MenuItem name="1">
         <Icon type="ios-navigate"></Icon>
         {{ user }}
+      </MenuItem>
+      <MenuItem>
+        <Icon type="ios-navigate"></Icon>
+        <router-link to="/register">註冊</router-link>  
       </MenuItem>
       <MenuItem>
         <Icon type="ios-navigate"></Icon>
@@ -38,7 +43,7 @@ export default {
   left: 20px;
 }
 .layout-nav {
-  width: 280px;
+  width: 350px;
   margin: 0 auto;
   margin-right: 20px;
 }
