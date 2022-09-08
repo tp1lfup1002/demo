@@ -1,10 +1,10 @@
 <template>
-  <Menu mode="horizontal" theme="dark" active-name="1">
+  <Menu mode="horizontal" theme="dark" active-name="1" style="text-align:center;">
     <div class="layout-logo">(❁´◡`❁)</div>
     <div class="layout-nav">
       <MenuItem name="1">
         <Icon type="ios-navigate"></Icon>
-        {{ user }}
+        {{ userName }}
       </MenuItem>
       <MenuItem>
         <Icon type="ios-navigate"></Icon>
@@ -16,10 +16,10 @@
 
 <script>
 export default {
-  name: "HeaderView",
+  name: "BannerComponents",
+  props: ['userName'],
   data() {
     return {
-      user: "使用者1號",
     };
   },
 };
