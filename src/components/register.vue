@@ -13,9 +13,7 @@
     <button type="submit" class="btnClass" value="點擊">註冊</button>
   </form>
 </template>
-
 <script>
-
 export default {
   methods: {
     onSubmit() {
