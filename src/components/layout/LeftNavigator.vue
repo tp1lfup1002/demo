@@ -1,6 +1,6 @@
 <template>
-  <Menu theme="light" width="auto">
-    <SubMenu>
+  <Menu theme="light" width="auto" style="text-align:center;">
+    <Submenu>
       <template #title>
         <Icon type="ops-navigate"></Icon>
         功能列表
@@ -17,13 +17,12 @@
       <MenuItem name="1-4">
         <router-link to="/ProductList">商品列表</router-link>
       </MenuItem>
-    </SubMenu>
+    </Submenu>
   </Menu>
 </template>
 
 <script>
 export default {
-  name: "LeftNavigator",
 };
 </script>
 

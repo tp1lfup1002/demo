@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Layout :style="{ height: '-webkit-fill-available' }">
-      <Header><banner></banner></Header>
+      <Header><banner :user-name="user"></banner></Header>
       <Layout>
         <Sider hide-trigger :style="{ background: '#fff' }">
           <left-navigator></left-navigator>
@@ -28,6 +28,11 @@ export default {
     Banner,
     LeftNavigator,
   },
+  data() {
+    return {
+      user : "金鋼狼"
+    }
+  },
 };
 </script>
 
@@ -36,7 +41,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   height: 100vh;
 }
@@ -45,7 +49,6 @@ export default {
   background: #f5f7f9;
   position: relative;
   border-radius: 4px;
-  overflow: hidden;
   height: -webkit-fill-available;
 }
 </style>
