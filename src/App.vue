@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      user : "金鋼狼"
+      user : localStorage.getItem("name")
     }
   },
 };
