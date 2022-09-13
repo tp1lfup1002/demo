@@ -7,11 +7,11 @@
         <Icon type="ios-navigate"></Icon>
         {{ userName }}
       </MenuItem>
-      <MenuItem>
+      <MenuItem name="register">
         <Icon type="ios-navigate"></Icon>
         <router-link to="/register">註冊</router-link>  
       </MenuItem>
-      <MenuItem>
+      <MenuItem name="logout">
         <Icon type="ios-navigate"></Icon>
         登出
       </MenuItem>
@@ -21,7 +21,6 @@
 
 <script>
 export default {
-  name: "BannerComponents",
   props: ['userName'],
   data() {
     return {

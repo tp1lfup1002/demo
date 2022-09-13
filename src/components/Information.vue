@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: "InformationComponent",
   data() {
     return {
         getID : localStorage.getItem("ID"), //取出已存在瀏覽器的資料

@@ -1,7 +1,7 @@
 <template>
   <List item-layout="vertical" border>
     <ListItem
-      v-for="item in productList"
+      v-for="(item, idx) in productList"
       :key="item.key"
       style="text-algin: left"
     >
@@ -13,10 +13,12 @@
       {{ item.content }}
       <template #action>
         <li>
-          <a href="">編輯</a>
+          <router-link :to="{ name: 'edit', query: { index: idx } }">
+            編輯
+          </router-link>
         </li>
-         <li>
-          <a href="">移除</a>
+        <li>
+          <a @click="delProduct(idx)">移除</a>
         </li>
       </template>
       <template #extra>
@@ -34,14 +36,15 @@ export default {
   data() {
     return {};
   },
-  mounted() {
+  methods: {
+    delProduct(key) {
+      console.log("移除第" + key + "個");
+      this.$store.dispatch("product/delProduct", key);
+    },
   },
   computed: mapState({
-    productList: state => state.product.productList,
+    productList: (state) => state.product.productList,
   }),
-  created() {
-    this.$store.dispatch("product/setProduct");
-  },
 };
 </script>
 

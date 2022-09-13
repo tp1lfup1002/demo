@@ -15,7 +15,6 @@
 </template>
 <script>
 export default {
-  name: "RegisterComponent",
   methods: {
     onSubmit() {
         var setID = document.querySelector(".ID").value;

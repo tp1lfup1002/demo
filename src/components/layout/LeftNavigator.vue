@@ -1,6 +1,6 @@
 <template>
-  <Menu theme="light" width="auto" style="text-align:center;">
-    <Submenu>
+  <Menu theme="light" width="auto" style="text-align: center">
+    <Submenu name="1">
       <template #title>
         <Icon type="ops-navigate"></Icon>
         功能列表
@@ -25,9 +25,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
-<style>
-</style>
+<style></style>
