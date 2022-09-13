@@ -1,6 +1,10 @@
 <template>
-  <List item-layout="vertical" border >
-    <ListItem v-for="item in productList" :key="item.key" style="text-algin:left">
+  <List item-layout="vertical" border>
+    <ListItem
+      v-for="item in productList"
+      :key="item.key"
+      style="text-algin: left"
+    >
       <ListItemMeta
         :avatar="item.avatar"
         :title="item.title"
@@ -8,27 +12,27 @@
       />
       {{ item.content }}
       <template #extra>
-          <img :src="item.img" width="250" height="150" />
+        <img :src="item.img" width="250" height="150" />
       </template>
     </ListItem>
   </List>
 </template>
 
 <script>
-import product from '../data/product.json'
+/*import product from "../data/product.json";*/
+import { mapState } from "vuex";
 
 export default {
   data() {
-    return {
-      productList: product
-    };
+    return {};
   },
   mounted() {
-      this.axios.get('/data/product.json').then(function(response){
-          console.log(response);
-      }).catch(function(error){
-          console.log(error);
-      });
+  },
+  computed: mapState({
+    productList: state => state.product.productList,
+  }),
+  created() {
+    this.$store.dispatch("product/setProduct");
   },
 };
 </script>

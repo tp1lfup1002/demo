@@ -1,23 +1,37 @@
-const state = {
-  productList: new Map(),
-};
+import product from "@/data/product";
+
+const state = () => ({
+  init: true,
+  productList: [],
+});
 const getters = {};
 const mutations = {
-  addProduct: function (product) {
-    state.productList.set(product.id, product);
+  addProduct(state, product) {
+    state.productList.push(product);
   },
-  updProduct: function () {},
-  delProduct: function (product_id) {
-    state.productList.delete(product_id);
+  updProduct() {},
+  delProduct(state, product_id) {
+    state.productList.splice(product_id, 1);
+  },
+  setProduct(state, products) {
+    if (state.init) {
+      state.productList = products;  
+    } else {
+      state.init = false;
+    }  
   },
 };
-const action = {
+const actions = {
   addProduct({ commit }, product) {
     commit("addProduct", product);
   },
   updProduct() {},
   delProduct({ commit }, product_id) {
     commit("delProduct", product_id);
+  },
+  setProduct({ commit }) {
+    const products = product.getProducts();
+    commit("setProduct", products);
   },
 };
 
@@ -26,5 +40,5 @@ export default {
   state,
   getters,
   mutations,
-  action,
+  actions,
 };
