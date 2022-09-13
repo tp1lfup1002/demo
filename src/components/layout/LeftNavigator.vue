@@ -14,6 +14,9 @@
       <MenuItem name="1-3">
         <router-link to="/product">商品列表</router-link>
       </MenuItem>
+      <MenuItem name="1-4">
+        <router-link to="/add">商品上架</router-link>
+      </MenuItem>
     </Submenu>
   </Menu>
 </template>

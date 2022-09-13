@@ -11,6 +11,14 @@
         :description="item.description"
       />
       {{ item.content }}
+      <template #action>
+        <li>
+          <a href="">編輯</a>
+        </li>
+         <li>
+          <a href="">移除</a>
+        </li>
+      </template>
       <template #extra>
         <img :src="item.img" width="250" height="150" />
       </template>
