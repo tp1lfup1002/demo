@@ -12,9 +12,6 @@
         <router-link to="/Information">個人資訊</router-link>
       </MenuItem>
       <MenuItem name="1-3">
-        <router-link to="/Hello">HelloWorld測試</router-link>
-      </MenuItem>
-      <MenuItem name="1-4">
         <router-link to="/product">商品列表</router-link>
       </MenuItem>
       <MenuItem name="1-4">

@@ -22,7 +22,7 @@
         </li>
       </template>
       <template #extra>
-        <img :src="item.img" width="250" height="150" />
+        <img :src="item.avatar" width="250" height="150" />
       </template>
     </ListItem>
   </List>
@@ -40,6 +40,10 @@ export default {
     delProduct(key) {
       console.log("移除第" + key + "個");
       this.$store.dispatch("product/delProduct", key);
+      this.$Message['success']({
+        background: true,
+        content: '刪除成功'
+      });
     },
   },
   computed: mapState({

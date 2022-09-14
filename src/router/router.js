@@ -19,7 +19,7 @@ export const router = createRouter({
     {
       name: "edit",
       path: "/edit",
-      props: { idx: true },
+      props: { index: true },
       component: EditProduct,
     },
   ],

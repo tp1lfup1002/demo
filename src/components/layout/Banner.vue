@@ -4,15 +4,15 @@
 
     <div class="layout-nav">
       <MenuItem name="1">
-        <Icon type="ios-navigate"></Icon>
+        <Icon type="ios-contact" />
         {{ userName }}
       </MenuItem>
       <MenuItem name="register">
-        <Icon type="ios-navigate"></Icon>
+        <Icon type="ios-paper-outline" />
         <router-link to="/register">註冊</router-link>  
       </MenuItem>
       <MenuItem name="logout">
-        <Icon type="ios-navigate"></Icon>
+        <Icon type="ios-alert-outline" />
         登出
       </MenuItem>
     </div>

@@ -1,47 +1,51 @@
 <template>
-  <Form ref="formItem" :model="formItem" :label-width="80" style="width: 350px">
+  <Form
+    ref="getProduct"
+    :model="getProduct"
+    :label-width="80"
+    style="width: 350px"
+  >
     <FormItem label="識別碼" prop="id">
-      <Input v-model="formItem.id"></Input>
+      <Input v-model="getProduct.id"></Input>
     </FormItem>
     <FormItem label="圖片位置" prop="avatar">
-      <Input v-model="formItem.avatar"></Input>
+      <Input v-model="getProduct.avatar"></Input>
     </FormItem>
     <FormItem label="大標題" prop="title">
-      <Input v-model="formItem.title"></Input>
+      <Input v-model="getProduct.title"></Input>
     </FormItem>
     <FormItem label="小標題" prop="description">
-      <Input v-model="formItem.description"></Input>
+      <Input v-model="getProduct.description"></Input>
     </FormItem>
     <FormItem label="內文" prop="content">
       <Input
-        v-model="formItem.content"
+        v-model="getProduct.content"
         type="textarea"
         :autosize="{ minRows: 2, maxRows: 5 }"
       ></Input>
-    </FormItem>
-    <FormItem>
-      <Button type="primary" @click="handleSubmit('formItem')">修改</Button>
     </FormItem>
   </Form>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
-      formItem: {
-        id: "",
-        avatar: "",
-        title: "",
-        description: "",
-        content: "",
-      },
+      id: 0,
     };
   },
-  methods: {
-    handleSubmit() {
-      console.log("送出");
-    },
+  methods: {},
+  mounted() {
+    this.id = this.$route.query.index;
+  },
+  computed: {
+    ...mapState({
+      getProduct(state) {
+        return state.product.productList[this.id];
+      },
+    }),
   },
 };
 </script>

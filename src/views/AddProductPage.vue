@@ -20,7 +20,7 @@
       ></Input>
     </FormItem>
     <FormItem>
-      <Button type="primary" @click="handleSubmit('formItem')"> 送出 </Button>
+      <Button type="primary" @click="handleSubmit()"> 送出 </Button>
       <Button @click="handleReset('formItem')" style="margin-left: 8px">
         重置
       </Button>
@@ -45,6 +45,10 @@ export default {
     handleSubmit() {
       console.log("送出");
       this.$store.dispatch("product/addProduct", this.formItem);
+      this.$Message['success']({
+        background: true,
+        content: '新增成功'
+      });
     },
     handleReset(name) {
       this.$refs[name].resetFields();
