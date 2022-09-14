@@ -11,10 +11,10 @@
       <MenuItem name="1-2">
         <router-link to="/Information">個人資訊</router-link>
       </MenuItem>
-      <MenuItem name="1-3">
+      <MenuItem name="1-3" v-show="isRegister()">
         <router-link to="/product">商品列表</router-link>
       </MenuItem>
-      <MenuItem name="1-4">
+      <MenuItem name="1-4" v-show="isRegister()">
         <router-link to="/add">商品上架</router-link>
       </MenuItem>
     </Submenu>
@@ -22,7 +22,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    isRegister() {
+      if (localStorage.getItem("name") != null) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+};
 </script>
 
 <style></style>

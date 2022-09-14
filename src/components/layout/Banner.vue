@@ -11,10 +11,6 @@
         <Icon type="ios-paper-outline" />
         <router-link to="/register">註冊</router-link>  
       </MenuItem>
-      <MenuItem name="logout">
-        <Icon type="ios-alert-outline" />
-        登出
-      </MenuItem>
     </div>
   </Menu>
 </template>
