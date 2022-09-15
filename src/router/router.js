@@ -4,7 +4,6 @@ import HomePage from '../views/HomePage.vue'
 import Information from '../components/Information.vue'
 import register from '../components/register.vue'
 import ProductList from '../views/ProductList.vue'
-
 export const router = createRouter({
       history: createWebHistory(),
       routes: [

@@ -15,7 +15,7 @@
         <router-link to="/Hello">HelloWorld測試</router-link>
       </MenuItem>
       <MenuItem name="1-4">
-        <router-link to="/ProductList">商品列表</router-link>
+        <router-link to="/Product">商品列表</router-link>
       </MenuItem>
     </Submenu>
   </Menu>
