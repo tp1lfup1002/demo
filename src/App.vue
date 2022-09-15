@@ -30,8 +30,11 @@ export default {
   },
   data() {
     return {
-      user : localStorage.getItem("name")
-    }
+      user: localStorage.getItem("name"),
+    };
+  },
+  created() {
+    this.$store.dispatch("product/setProduct");
   },
 };
 </script>

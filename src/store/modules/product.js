@@ -15,10 +15,11 @@ const mutations = {
   },
   setProduct(state, products) {
     if (state.init) {
-      state.productList = products;  
+      console.log("初始資料");
+      state.productList = products;
     } else {
       state.init = false;
-    }  
+    }
   },
 };
 const actions = {

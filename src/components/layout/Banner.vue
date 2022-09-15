@@ -4,16 +4,12 @@
 
     <div class="layout-nav">
       <MenuItem name="1">
-        <Icon type="ios-navigate"></Icon>
+        <Icon type="ios-contact" />
         {{ userName }}
       </MenuItem>
-      <MenuItem>
-        <Icon type="ios-navigate"></Icon>
+      <MenuItem name="register">
+        <Icon type="ios-paper-outline" />
         <router-link to="/register">註冊</router-link>  
-      </MenuItem>
-      <MenuItem>
-        <Icon type="ios-navigate"></Icon>
-        登出
       </MenuItem>
     </div>
   </Menu>
@@ -21,7 +17,6 @@
 
 <script>
 export default {
-  name: "BannerComponents",
   props: ['userName'],
   data() {
     return {
